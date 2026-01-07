@@ -9,15 +9,14 @@ export default function CallToAction() {
         {/* Text content */}
         <div className="w-full md:w-3/5 z-10">
           <h2 className="text-foreground mb-6 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-            Pronto para Atender <span className="text-primary">24/7?</span>
+            Pronto para <span className="text-primary">Inovar?</span>
           </h2>
 
           <p className="my-4 text-base md:text-lg max-w-md text-muted-foreground leading-relaxed">
-            Pare de perder clientes por falta de atendimento rápido.
+            Não deixe sua ideia apenas no papel. Vamos transformá-la em realidade.
           </p>
           <p className="mb-6 text-base md:text-lg max-w-md text-muted-foreground leading-relaxed">
-            Agende uma demonstração gratuita e veja como a automação inteligente pode transformar seu negócio em apenas
-            15 minutos.
+            Agende uma consultoria gratuita e descubra como podemos elevar o nível tecnológico do seu negócio.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -26,14 +25,14 @@ export default function CallToAction() {
               href="#services"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-primary/50 text-foreground hover:bg-secondary/50 transition-all font-medium"
             >
-              Ver demonstração
+              Nossas soluções
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
 
           <p className="mt-6 text-sm text-muted-foreground">
-            ✓ Sem compromisso inicial &nbsp;&nbsp;|&nbsp;&nbsp; ✓ Setup em 7 dias &nbsp;&nbsp;|&nbsp;&nbsp; ✓ ROI
-            garantido
+            ✓ Consultoria Gratuita &nbsp;&nbsp;|&nbsp;&nbsp; ✓ Entrega Ágil &nbsp;&nbsp;|&nbsp;&nbsp; ✓ Qualidade
+            Garantida
           </p>
         </div>
 

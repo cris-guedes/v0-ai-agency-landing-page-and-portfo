@@ -9,9 +9,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { Menu } from "lucide-react"
 import ThemeToggle from "./theme-toggle"
 import { useTheme } from "next-themes"
-import NavDropdown from "./nav-dropdown"
 import MobileMenu from "./mobile-menu"
-import { resourcesDropdownData } from "./nav-data"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -60,25 +58,19 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-200 ${
-          isScrolled ? "bg-white/90 dark:bg-[#111111]/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
-        }`}
+        className={`sticky top-0 z-40 w-full transition-all duration-200 ${isScrolled ? "bg-white/90 dark:bg-[#111111]/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+          }`}
       >
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center" onClick={handleLogoClick}>
               {/* Use a div with the same dimensions during SSR to prevent layout shift */}
               {mounted ? (
-                <Image
-                  src={logoSrc || "/placeholder.svg"}
-                  alt="Automatic Logo"
-                  width={200}
-                  height={50}
-                  className="h-12 w-auto"
-                  priority
-                />
+                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                  WebVel
+                </span>
               ) : (
-                <div className="h-12 w-[200px]" />
+                <span className="text-2xl font-bold text-primary">WebVel</span>
               )}
             </Link>
 
@@ -86,36 +78,35 @@ export default function Header() {
               {/* Desktop Navigation */}
               <nav className="hidden md:block">
                 <ul className="flex space-x-6">
-                  <li className="hidden md:block">
-                    <NavDropdown
-                      trigger="Resources"
-                      items={resourcesDropdownData}
-                      columns={2}
-                      className={pathname.startsWith("/resources") ? "text-[#7A7FEE] dark:text-[#7A7FEE]" : ""}
-                    />
-                  </li>
+
                   <li>
                     <Link
                       href="/portfolio"
-                      className={`transition-colors ${
-                        pathname === "/portfolio"
-                          ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
-                          : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
-                      }`}
+                      className={`transition-colors ${pathname === "/portfolio"
+                        ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
+                        : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
+                        }`}
                     >
-                      Portfolio
+                      Portfólio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/#booking"
+                      className="text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE] transition-colors"
+                    >
+                      Fale Conosco
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/start"
-                      className={`transition-colors ${
-                        pathname === "/start"
-                          ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
-                          : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
-                      }`}
+                      className={`transition-colors ${pathname === "/start"
+                        ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
+                        : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
+                        }`}
                     >
-                      Start Project
+                      Iniciar Projeto
                     </Link>
                   </li>
                 </ul>

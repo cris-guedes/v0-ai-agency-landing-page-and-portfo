@@ -1,49 +1,49 @@
-import { Bot, Calendar, MessageCircle, Zap, BarChart3, Headphones } from "lucide-react"
+import { Palette, Globe, Smartphone, Server, LineChart, Code } from "lucide-react"
 
 const services = [
   {
     id: 1,
-    title: "Chatbot Inteligente",
+    title: "UI/UX Design",
     description:
-      "IA que entende seus clientes e responde com precisão. Aprende com cada conversa e melhora continuamente.",
-    icon: Bot,
+      "Interfaces modernas, intuitivas e focadas na experiência do usuário. Transformamos sua marca em design visual impactante.",
+    icon: Palette,
     color: "bg-primary",
   },
   {
     id: 2,
-    title: "Automação WhatsApp",
-    description: "Atendimento automático no WhatsApp Business. Qualifique leads, tire dúvidas e feche vendas 24/7.",
-    icon: MessageCircle,
+    title: "Desenvolvimento Web",
+    description: "Sites institucionais, Landing Pages e E-commerce de alta performance, otimizados para SEO e conversão.",
+    icon: Globe,
     color: "bg-primary",
   },
   {
     id: 3,
-    title: "Sistema de Agendamento",
+    title: "Apps Mobile",
     description:
-      "Agende consultas, reuniões e serviços automaticamente. Confirmações, lembretes e reagendamentos sem intervenção humana.",
-    icon: Calendar,
+      "Aplicativos nativos e híbridos para iOS e Android. Leve seu negócio para a palma da mão dos seus clientes.",
+    icon: Smartphone,
     color: "bg-primary",
   },
   {
     id: 4,
-    title: "Respostas Instantâneas",
+    title: "Sistemas Sob Medida",
     description:
-      "Tempo de resposta em segundos. Seus clientes não precisam mais esperar horas por uma resposta simples.",
-    icon: Zap,
+      "Soluções de software personalizadas para a gestão do seu negócio. CRMs, ERPs e Dashboards administrativos.",
+    icon: Server,
     color: "bg-primary",
   },
   {
     id: 5,
-    title: "Relatórios e Insights",
-    description: "Dashboards completos com métricas de atendimento, satisfação do cliente e oportunidades de vendas.",
-    icon: BarChart3,
+    title: "Consultoria Tech",
+    description: "Análise de infraestrutura, arquitetura de software e otimização de processos tecnológicos.",
+    icon: LineChart,
     color: "bg-primary",
   },
   {
     id: 6,
-    title: "Suporte Híbrido",
-    description: "IA para dúvidas comuns, humanos para casos complexos. O melhor dos dois mundos trabalhando juntos.",
-    icon: Headphones,
+    title: "Manutenção e Evolução",
+    description: "Suporte contínuo e implementação de novas funcionalidades para garantir que seu software nunca pare.",
+    icon: Code,
     color: "bg-primary",
   },
 ]
@@ -52,19 +52,18 @@ export default function Services() {
   return (
     <section id="services" className="my-20">
       <h2 className="text-foreground mb-6 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-        Automatize Seu
-        <span className="block text-primary">Atendimento</span>
+        Nossas
+        <span className="block text-primary">Soluções</span>
       </h2>
       <p className="mb-12 max-w-2xl text-muted-foreground leading-relaxed">
-        Soluções de IA que transformam a forma como você se comunica com seus clientes. Mais eficiência, menos custos e
-        clientes mais satisfeitos.
+        Combinamos tecnologia de ponta e design inovador para entregar resultados que impulsionam o crescimento do seu negócio.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <div
             key={service.id}
-            className="card p-6 shadow-md hover:shadow-lg hover:border-primary/50 transition-all duration-300 group"
+            className="card p-6 shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300 group"
           >
             <div
               className={`${service.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform`}

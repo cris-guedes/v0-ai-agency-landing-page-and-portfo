@@ -6,39 +6,39 @@ import { ChevronDown } from "lucide-react"
 const faqs = [
   {
     id: 1,
-    question: "Como funciona a implementação do chatbot?",
+    question: "Como funciona o processo de desenvolvimento?",
     answer:
-      "Começamos com uma reunião para entender seu negócio e fluxo de atendimento. Em seguida, treinamos a IA com suas informações e integramos aos seus canais. O processo completo leva de 7 a 14 dias, dependendo da complexidade.",
+      "Iniciamos com uma fase de descoberta para entender suas necessidades. Em seguida, partimos para o design e prototipagem. Após aprovação, iniciamos o desenvolvimento ágil com entregas parciais, finalizando com testes e lançamento.",
   },
   {
     id: 2,
-    question: "O chatbot substitui completamente minha equipe?",
+    question: "Quanto tempo leva para criar um site ou aplicativo?",
     answer:
-      "Não necessariamente. Recomendamos um modelo híbrido: o chatbot responde dúvidas comuns e qualifica leads, enquanto sua equipe foca em casos complexos e fechamento de vendas. Isso aumenta a eficiência sem perder o toque humano.",
+      "O prazo varia conforme a complexidade do projeto. Landing pages podem ser entregues em até 7 dias, enquanto sistemas complexos ou aplicativos podem levar de 4 a 12 semanas. Definimos um cronograma claro no início do projeto.",
   },
   {
     id: 3,
-    question: "Posso integrar com WhatsApp Business?",
+    question: "Vocês fazem manutenção após o lançamento?",
     answer:
-      "Sim! A integração com WhatsApp Business é uma de nossas principais soluções. Seu chatbot atende automaticamente mensagens, envia confirmações, lembretes e pode até processar pedidos diretamente pelo WhatsApp.",
+      "Sim! Oferecemos planos de suporte e manutenção contínua para garantir que seu software esteja sempre atualizado, seguro e funcionando perfeitamente, além de implementar novas funcionalidades conforme seu negócio cresce.",
   },
   {
     id: 4,
-    question: "Quanto custa uma solução de automação?",
+    question: "Quais tecnologias vocês utilizam?",
     answer:
-      "Os valores variam conforme a complexidade e volume de atendimentos. Chatbots básicos começam em R$ 997/mês. Soluções completas com WhatsApp, agendamento e CRM integrado a partir de R$ 2.997/mês. Oferecemos planos personalizados.",
+      "Trabalhamos com as tecnologias mais modernas do mercado, como React, Next.js, Node.js, React Native e Flutter. Escolhemos a tech stack ideal baseada nas necessidades específicas de performance e escala do seu projeto.",
   },
   {
     id: 5,
-    question: "E se o cliente fizer uma pergunta que a IA não sabe responder?",
+    question: "Vocês desenvolvem o design também?",
     answer:
-      "O sistema transfere automaticamente para um atendente humano, preservando todo o histórico da conversa. Além disso, a IA aprende continuamente - cada nova pergunta é uma oportunidade de treinamento para melhorar as respostas futuras.",
+      "Com certeza. Temos uma equipe de UI/UX Design dedicada a criar interfaces bonitas e funcionais. Não apenas codificamos, mas criamos experiências digitais completas que encantam seus usuários.",
   },
   {
     id: 6,
-    question: "Vocês oferecem suporte e manutenção?",
+    question: "Como é feito o pagamento?",
     answer:
-      "Sim! Todos os nossos planos incluem suporte técnico, atualizações da IA e ajustes nas respostas. Também oferecemos treinamento para sua equipe e relatórios mensais de performance com insights para otimização contínua.",
+      "Trabalhamos com flexibilidade. Geralmente operamos com um sinal inicial e o restante parcelado conforme as entregas do projeto. Para contratos de manutenção e consultoria, trabalhamos com planos mensais recorrentes.",
   },
 ]
 

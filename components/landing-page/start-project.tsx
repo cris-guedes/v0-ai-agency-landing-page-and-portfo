@@ -51,12 +51,12 @@ export default function StartProject() {
   return (
     <div className="min-h-screen bg-white dark:bg-[#111111] w-full">
       <div className="mb-8 text-center pt-8">
-        <h2 className="text-black dark:text-white text-3xl md:text-5xl font-medium">
-          Ready to Start <br />
-          Your Next <span className="text-[#7A7FEE]">Project</span>?
+        <h2 className="text-black dark:text-white text-3xl md:text-5xl font-bold">
+          Pronto para Iniciar <br />
+          Seu Próximo <span className="text-primary">Projeto</span>?
         </h2>
       </div>
-      <ProjectForm   />
+      <ProjectForm />
     </div>
   )
 }

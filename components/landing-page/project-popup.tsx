@@ -98,7 +98,7 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center gap-2"
               >
-                Visit Project
+                Visitar Projeto
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -117,7 +117,7 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
               </a>
             )}
             <Link href={`/portfolio/${project.slug}`} className="btn-secondary inline-block">
-              View Full Case Study
+              Ver Case Completo
             </Link>
           </div>
         </div>

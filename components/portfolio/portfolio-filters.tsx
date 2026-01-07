@@ -7,13 +7,13 @@ interface PortfolioFiltersProps {
 
 export default function PortfolioFilters({ activeFilter, setActiveFilter }: PortfolioFiltersProps) {
   const filters = [
-    { id: "all", label: "All Projects" },
-    { id: "web", label: "Web Applications" },
+    { id: "all", label: "Todos os Projetos" },
+    { id: "web", label: "Aplicações Web" },
     { id: "web3", label: "Web3 & Blockchain" },
-    { id: "ai", label: "AI Solutions" },
+    { id: "ai", label: "Soluções IA" },
     { id: "design", label: "UX/UI Design" },
-    { id: "bubble", label: "Bubble Projects" },
-    { id: "mobile", label: "Mobile Apps" },
+    { id: "bubble", label: "Projetos Bubble" },
+    { id: "mobile", label: "Apps Mobile" },
   ]
 
   return (
@@ -22,11 +22,10 @@ export default function PortfolioFilters({ activeFilter, setActiveFilter }: Port
         <button
           key={filter.id}
           onClick={() => setActiveFilter(filter.id)}
-          className={`px-4 py-2 rounded-md text-sm transition-colors ${
-            activeFilter === filter.id
+          className={`px-4 py-2 rounded-md text-sm transition-colors ${activeFilter === filter.id
               ? "bg-[#7A7FEE] text-white"
               : "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-          }`}
+            }`}
         >
           {filter.label}
         </button>

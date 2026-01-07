@@ -96,7 +96,7 @@
     background-color: var(--card);
     color: var(--card-foreground);
     border: 1px solid var(--card-border);
-    @apply rounded-3xl overflow-hidden shadow-md;
+    @apply rounded-3xl overflow-hidden shadow-sm;
   }
 
   .dark .card {

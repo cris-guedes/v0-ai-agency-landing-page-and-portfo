@@ -3,9 +3,9 @@ import { fetchPortfolioData } from "@/utils/csv-parser"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Portfolio | Automatic",
+  title: "Portfólio | Automatic",
   description:
-    "Explore our latest projects and case studies. From AI-driven automation to custom marketplaces, our work helps businesses scale smarter.",
+    "Explore nossos projetos e cases recentes. De automação com IA a marketplaces personalizados, nosso trabalho ajuda empresas a crescerem com inovação.",
 }
 
 export default async function Portfolio() {

@@ -11,7 +11,7 @@ interface ContactFormButtonProps {
 export default function ContactFormButton({ className = "", children }: ContactFormButtonProps) {
   return (
     <Link href="/start" className={className || "btn-primary"}>
-      {children || "Schedule Discovery Call"}
+      {children || "Agendar Conversa"}
     </Link>
   )
 }

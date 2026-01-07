@@ -14,9 +14,20 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "AI Atende - Automação Inteligente de Atendimento",
+  title: "WebVel - Design & Software | Cascavel - PR",
   description:
-    "Transforme seu atendimento ao cliente com IA. Chatbots inteligentes, automação de WhatsApp e sistemas de agendamento que trabalham 24/7 para o seu negócio.",
+    "Transformamos suas ideias em realidade digital. Especialistas em desenvolvimento de sites, sistemas web, aplicativos e design exclusivo em Cascavel - PR e região.",
+  keywords: [
+    "desenvolvimento de sites",
+    "criação de sites cascavel",
+    "software cascavel",
+    "aplicativos",
+    "sistemas web",
+    "design",
+    "agência digital cascavel",
+    "programador cascavel",
+    "webvel",
+  ],
   icons: {
     icon: [{ url: "/automatic-favicon-no-bg.png", type: "image/png" }],
     apple: [{ url: "/automatic-favicon-no-bg.png" }],

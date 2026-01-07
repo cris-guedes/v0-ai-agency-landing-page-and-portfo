@@ -114,7 +114,7 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#7A7FEE] text-white rounded-md hover:bg-opacity-90 transition-all text-sm font-medium shadow-sm"
               >
-                Visit Project
+                Visitar Projeto
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}
@@ -123,7 +123,7 @@ export default function ProjectPopup({ project, onClose }: ProjectPopupProps) {
               className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE] text-sm font-medium"
               onClick={onClose}
             >
-              View Full Case Study
+              Ver Case Completo
             </Link>
           </div>
         </div>
