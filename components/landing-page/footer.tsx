@@ -21,10 +21,10 @@ export default function Footer() {
         <Link href="/" className="flex items-center justify-center mb-4">
           {mounted ? (
             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-              WebVel
+              Estúdio Dev
             </span>
           ) : (
-            <span className="text-2xl font-bold text-primary">WebVel</span>
+            <span className="text-2xl font-bold text-primary">Estúdio Dev</span>
           )}
         </Link>
         <p className="text-sm text-muted-foreground max-w-md mx-auto mb-8">
@@ -32,7 +32,7 @@ export default function Footer() {
         </p>
 
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} WebVel. Todos os direitos reservados.
+          © {new Date().getFullYear()} Estúdio Dev. Todos os direitos reservados.
         </p>
       </div>
     </footer>

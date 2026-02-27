@@ -9,7 +9,7 @@ interface PortfolioCardProps {
 
 export default function PortfolioCard({ item }: PortfolioCardProps) {
   return (
-    <div className="card overflow-hidden rounded-3xl bg-white dark:bg-[#272829] border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:shadow-lg h-full">
+    <div className="card overflow-hidden rounded-3xl bg-card border border-border transition-all duration-300 hover:shadow-lg h-full">
       <Link href={`/portfolio/${item.slug}`} className="block h-full flex flex-col">
         <div className="relative overflow-hidden">
           <Image
@@ -29,10 +29,10 @@ export default function PortfolioCard({ item }: PortfolioCardProps) {
         </div>
 
         <div className="p-4 md:p-6 flex flex-col flex-grow">
-          <h3 className="font-medium text-gray-900 dark:text-white text-lg mb-2">{item.title}</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{item.shortDescription}</p>
-          <div className="inline-flex items-center text-[#7A7FEE] hover:underline text-sm font-medium mt-auto">
-            View Project <ArrowUpRight className="w-4 h-4 ml-1" />
+          <h3 className="font-medium text-card-foreground text-lg mb-2">{item.title}</h3>
+          <p className="text-sm text-muted-foreground mb-4">{item.shortDescription}</p>
+          <div className="inline-flex items-center text-primary hover:underline text-sm font-medium mt-auto">
+            Ver Projeto <ArrowUpRight className="w-4 h-4 ml-1" />
           </div>
         </div>
       </Link>

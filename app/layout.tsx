@@ -14,7 +14,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "WebVel - Design & Software | Cascavel - PR",
+  title: "Estúdio Dev - Design & Software | Cascavel - PR",
   description:
     "Transformamos suas ideias em realidade digital. Especialistas em desenvolvimento de sites, sistemas web, aplicativos e design exclusivo em Cascavel - PR e região.",
   keywords: [
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "design",
     "agência digital cascavel",
     "programador cascavel",
-    "webvel",
+    "estúdio dev",
   ],
   icons: {
-    icon: [{ url: "/automatic-favicon-no-bg.png", type: "image/png" }],
-    apple: [{ url: "/automatic-favicon-no-bg.png" }],
+    icon: [{ url: "/estudiodevlogo-favicon.png", type: "image/png" }],
+    apple: [{ url: "/estudiodevlogo-favicon.png" }],
   },
   generator: "v0.app",
 }
@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={inter.variable}>
+      <body className={`${inter.variable} bg-background text-foreground transition-colors duration-500 antialiased`}>
         <Suspense fallback={null}>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
             {children}

@@ -5,8 +5,8 @@ import Image from "next/image"
 
 
 export default function WhatsAppButton() {
-    const phoneNumber = "5511999999999" // Fictional number
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da WebVel.")
+    const phoneNumber = "5545988414559"
+    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Estúdio Dev.")
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
 
     return (
