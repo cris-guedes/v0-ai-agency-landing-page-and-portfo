@@ -1,33 +1,24 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Header from "@/components/landing-page/header"
-import Footer from "@/components/landing-page/footer"
-import PortfolioMasonryGridFinal from "./portfolio-masonry-grid-final"
-import PortfolioFilters from "./portfolio-filters"
-import type { PortfolioItem } from "@/utils/csv-parser"
-import { motion } from "framer-motion"
+import type { PortfolioItem } from "@/utils/csv-parser";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Header from "@/components/landing-page/header";
+import Footer from "@/components/landing-page/footer";
+import PortfolioMasonryGridFinal from "./portfolio-masonry-grid-final";
+import PortfolioFilters from "./portfolio-filters";
 
 interface PortfolioPageProps {
-  initialData: PortfolioItem[]
+  initialData: PortfolioItem[];
 }
 
 export default function PortfolioPage({ initialData }: PortfolioPageProps) {
-  const [activeFilter, setActiveFilter] = useState<string>("all")
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Add a loading state to prevent layout shifts
-  useEffect(() => {
-    // Simulate loading of images
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
-
-    return () => clearTimeout(timer)
-  }, [])
+  const [activeFilter, setActiveFilter] = useState<string>("all");
 
   const filteredItems =
-    activeFilter === "all" ? initialData : initialData.filter((item) => item.categories?.includes(activeFilter))
+    activeFilter === "all"
+      ? initialData
+      : initialData.filter((item) => item.categories?.includes(activeFilter));
 
   return (
     <main className="min-h-screen bg-background transition-colors duration-500">
@@ -47,27 +38,21 @@ export default function PortfolioPage({ initialData }: PortfolioPageProps) {
               Nosso <span className="text-primary">Portfólio</span>
             </motion.h1>
             <p className="text-gray-700 dark:text-gray-300 max-w-2xl">
-              Explore nossos projetos e cases recentes. De automação com IA a marketplaces personalizados, nosso trabalho ajuda empresas a crescerem com inovação.
+              Explore nossos projetos e cases recentes. De automação com IA a
+              marketplaces personalizados, nosso trabalho ajuda empresas a
+              crescerem com inovação.
             </p>
           </div>
 
-          <PortfolioFilters activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+          <PortfolioFilters
+            activeFilter={activeFilter}
+            setActiveFilter={setActiveFilter}
+          />
 
-          {isLoading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[...Array(6)].map((_, index) => (
-                <div
-                  key={index}
-                  className="animate-pulse rounded-3xl overflow-hidden bg-muted h-80"
-                ></div>
-              ))}
-            </div>
-          ) : (
-            <PortfolioMasonryGridFinal items={filteredItems} />
-          )}
+          <PortfolioMasonryGridFinal items={filteredItems} />
         </div>
       </div>
       <Footer />
     </main>
-  )
+  );
 }
