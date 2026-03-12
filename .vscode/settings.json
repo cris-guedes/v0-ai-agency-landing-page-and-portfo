@@ -1,0 +1,40 @@
+{
+  "git.ignoreLimitWarning": true,
+  "git.autofetch": true,
+
+  "conventionalCommits.scopes": ["test", "shared", "dev", "config", "infra"],
+
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Omni",
+  "workbench.sideBar.location": "right",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.maxColumn": 80,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.quickSuggestionsDelay": 10,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#fff2"
+    }
+  ],
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/out": true,
+    "**/docs": true
+  }
+}

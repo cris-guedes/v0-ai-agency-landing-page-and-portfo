@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "esbenp.prettier-vscode",
+    "rocketseat.theme-omni",
+    "mohsen1.prettify-json",
+    "vscode-icons-team.vscode-icons",
+    "vivaxy.vscode-conventional-commits"
+  ]
+}
