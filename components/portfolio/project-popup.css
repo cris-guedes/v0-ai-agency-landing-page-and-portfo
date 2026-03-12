@@ -20,7 +20,7 @@
 }
 
 .custom-content a {
-  color: #7a7fee;
+  color: var(--primary);
 }
 
 .custom-content a:hover {
@@ -29,16 +29,53 @@
 
 .custom-content ul,
 .custom-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-bottom: 3rem;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.custom-content ul {
-  list-style-type: disc;
+.custom-content ul li {
+  position: relative;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  /* rounded-md */
+  font-family: inherit;
+  font-size: 0.65rem;
+  font-weight: 900;
+  /* font-black */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  list-style: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.custom-content ol {
-  list-style-type: decimal;
+.custom-content ul li:hover {
+  transform: translateY(-2px);
+  background-color: var(--muted);
+  border-color: var(--primary);
+}
+
+.custom-content ul li::before,
+.custom-content ol li::before {
+  display: none !important;
+  content: none !important;
+}
+
+.custom-content ul li,
+.custom-content ol li {
+  list-style: none !important;
+  list-style-type: none !important;
 }
 
 .custom-content strong {
@@ -53,7 +90,7 @@
 }
 
 .custom-content blockquote {
-  border-left: 4px solid #7a7fee;
+  border-left: 4px solid var(--primary);
   padding-left: 1rem;
   font-style: italic;
   margin: 1rem 0;

@@ -22,7 +22,7 @@ export default function StartProject() {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.addedNodes.length) {
-          const iframe = document.querySelector("iframe[data-tally-src]")
+          const iframe = document.querySelector("iframe[data-tally-src]") as HTMLIFrameElement
           if (iframe) {
             // Set a data attribute on the iframe that can be used in CSS
             iframe.setAttribute("data-theme", resolvedTheme || "light")
@@ -49,14 +49,21 @@ export default function StartProject() {
   }, [resolvedTheme])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#111111] w-full">
-      <div className="mb-8 text-center pt-8">
-        <h2 className="text-black dark:text-white text-3xl md:text-5xl font-bold">
-          Pronto para Iniciar <br />
+    <div className="min-h-screen bg-background w-full transition-colors duration-500">
+      <div className="mb-12 text-center pt-16 container">
+        <h2 className="text-foreground text-4xl md:text-6xl font-black tracking-tight leading-tight">
+          Pronto para Iniciar <br className="hidden md:block" />
           Seu Próximo <span className="text-primary">Projeto</span>?
         </h2>
+        <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto font-light">
+          Preencha o formulário abaixo e nossa equipe entrará em contato em menos de 24 horas.
+        </p>
       </div>
-      <ProjectForm />
+      <div className="container pb-20">
+        <div className="bg-card border border-border/50 rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <ProjectForm />
+        </div>
+      </div>
     </div>
   )
 }

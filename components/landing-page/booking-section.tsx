@@ -17,7 +17,7 @@ export default function BookingSection() {
 
                     <div className="flex justify-center mt-6 mb-2 border-0 shadow-none">
                         <a
-                            href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20WebVel."
+                            href="https://wa.me/5545988414559?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Est%C3%BAdio%20Dev."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white rounded-full font-medium shadow-sm hover:bg-[#20bd5a] transition-all hover:scale-105"

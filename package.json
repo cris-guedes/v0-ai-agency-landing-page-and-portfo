@@ -9,8 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@calcom/atoms": "^2.2.0",
-    "@calcom/embed-react": "^1.5.3",
+    "@calcom/embed-react": "1.5.3",
     "@emotion/is-prop-valid": "latest",
     "@opentelemetry/api": "latest",
     "@remix-run/react": "latest",

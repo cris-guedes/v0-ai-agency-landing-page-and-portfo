@@ -1,62 +1,58 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Header from "@/components/landing-page/header"
-import Footer from "@/components/landing-page/footer"
-import PortfolioMasonryGridFinal from "./portfolio-masonry-grid-final"
-import PortfolioFilters from "./portfolio-filters"
-import type { PortfolioItem } from "@/utils/csv-parser"
+import type { PortfolioItem } from "@/utils/csv-parser";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Header from "@/components/landing-page/header";
+import Footer from "@/components/landing-page/footer";
+import PortfolioMasonryGridFinal from "./portfolio-masonry-grid-final";
+import PortfolioFilters from "./portfolio-filters";
 
 interface PortfolioPageProps {
-  initialData: PortfolioItem[]
+  initialData: PortfolioItem[];
 }
 
 export default function PortfolioPage({ initialData }: PortfolioPageProps) {
-  const [activeFilter, setActiveFilter] = useState<string>("all")
-  const [isLoading, setIsLoading] = useState(true)
-
-  // Add a loading state to prevent layout shifts
-  useEffect(() => {
-    // Simulate loading of images
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 500)
-
-    return () => clearTimeout(timer)
-  }, [])
+  const [activeFilter, setActiveFilter] = useState<string>("all");
 
   const filteredItems =
-    activeFilter === "all" ? initialData : initialData.filter((item) => item.categories?.includes(activeFilter))
+    activeFilter === "all"
+      ? initialData
+      : initialData.filter((item) => item.categories?.includes(activeFilter));
 
   return (
-    <main className="min-h-screen bg-white dark:bg-[#111111]">
+    <main className="min-h-screen bg-background transition-colors duration-500">
       <Header />
-      <div className="container pt-8 pb-20">
-        <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-medium text-black dark:text-white mb-4">
-            Nosso <span className="text-[#7A7FEE]">Portfólio</span>
-          </h1>
-          <p className="text-gray-700 dark:text-gray-300 max-w-2xl">
-            Explore nossos projetos e cases recentes. De automação com IA a marketplaces personalizados, nosso trabalho ajuda empresas a crescerem com inovação.
-          </p>
-        </div>
+      <div className="relative pt-24 pb-20">
+        {/* Smooth transition from header */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background to-transparent -translate-y-full pointer-events-none"></div>
 
-        <PortfolioFilters activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
-
-        {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="animate-pulse rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 h-80"
-              ></div>
-            ))}
+        <div className="container relative z-10">
+          <div className="mb-16">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-6 leading-tight tracking-tight"
+            >
+              Nosso <span className="text-primary">Portfólio</span>
+            </motion.h1>
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl">
+              Explore nossos projetos e cases recentes. De automação com IA a
+              marketplaces personalizados, nosso trabalho ajuda empresas a
+              crescerem com inovação.
+            </p>
           </div>
-        ) : (
+
+          <PortfolioFilters
+            activeFilter={activeFilter}
+            setActiveFilter={setActiveFilter}
+          />
+
           <PortfolioMasonryGridFinal items={filteredItems} />
-        )}
+        </div>
       </div>
       <Footer />
     </main>
-  )
+  );
 }

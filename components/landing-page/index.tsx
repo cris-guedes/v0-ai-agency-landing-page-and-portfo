@@ -17,16 +17,14 @@ export { Header, Hero, Projects, Services, Process, CallToAction, Footer, Contac
 // Main component that combines all sections
 export default function LandingPage({ showHeader = true, showFooter = true }: LandingPageProps) {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#111111]">
+    <main className="min-h-screen">
       {showHeader && <Header />}
-      <div className="container pt-4">
-        <Hero />
-        <Projects />
-        <Services />
-        <Process />
-        <CallToAction />
-        <BookingSection />
-      </div>
+      <Hero />
+      <Projects />
+      <Services />  
+      <Process />
+      <CallToAction />
+      <BookingSection />
       {showFooter && <Footer />}
       <WhatsAppButton />
     </main>

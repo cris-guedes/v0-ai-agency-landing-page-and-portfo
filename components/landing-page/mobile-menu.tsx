@@ -62,27 +62,34 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const logoSrc = isDarkMode ? "/logo-light.png" : "/logo-dark.png"
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black/50 md:hidden" style={{ display: isOpen ? "block" : "none" }}>
+    <div className="fixed inset-0 z-[100] bg-background/80 backdrop-blur-sm md:hidden transition-all duration-300" style={{ display: isOpen ? "block" : "none" }}>
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-white dark:bg-[#111111] shadow-xl overflow-y-auto"
+        className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-background border-l border-border shadow-2xl overflow-y-auto transition-colors duration-500"
       >
-        <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-[#111111]">
-          <Link href="/" className="flex items-center" onClick={onClose}>
+        <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-border bg-background/80 backdrop-blur-md">
+          <Link href="/" className="flex items-center gap-2" onClick={onClose}>
+            <Image
+              src="/estudiodevlogo-favicon.png"
+              alt="Estúdio Dev Logo"
+              width={24}
+              height={24}
+              className="w-6 h-6 object-contain"
+            />
             {mounted ? (
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                WebVel
+              <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                Estúdio Dev
               </span>
             ) : (
-              <span className="text-xl font-bold text-primary">WebVel</span>
+              <span className="text-xl font-black tracking-tight text-primary">Estúdio Dev</span>
             )}
           </Link>
           <button
             onClick={onClose}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-xl bg-muted hover:bg-muted/80 transition-colors"
             aria-label="Close menu"
           >
-            <X className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+            <X className="h-6 w-6 text-foreground" />
           </button>
         </div>
 
@@ -91,9 +98,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <li>
               <Link
                 href="/"
-                className={`flex items-center py-3 px-4 rounded-lg text-base ${pathname === "/"
-                  ? "bg-[#7A7FEE]/10 text-[#7A7FEE]"
-                  : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className={`flex items-center py-3 px-4 rounded-xl text-base font-medium transition-colors ${pathname === "/"
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/70 hover:bg-muted hover:text-foreground"
                   }`}
                 onClick={onClose}
               >
@@ -101,14 +108,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </Link>
             </li>
 
-
-
             <li>
               <Link
                 href="/portfolio"
-                className={`flex items-center py-3 px-4 rounded-lg text-base ${pathname === "/portfolio"
-                  ? "bg-[#7A7FEE]/10 text-[#7A7FEE]"
-                  : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className={`flex items-center py-3 px-4 rounded-xl text-base font-medium transition-colors ${pathname === "/portfolio"
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/70 hover:bg-muted hover:text-foreground"
                   }`}
                 onClick={onClose}
               >
@@ -119,9 +124,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <li>
               <Link
                 href="/start"
-                className={`flex items-center py-3 px-4 rounded-lg text-base ${pathname === "/start"
-                  ? "bg-[#7A7FEE]/10 text-[#7A7FEE]"
-                  : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className={`flex items-center py-3 px-4 rounded-xl text-base font-medium transition-colors ${pathname === "/start"
+                  ? "bg-primary/10 text-primary"
+                  : "text-foreground/70 hover:bg-muted hover:text-foreground"
                   }`}
                 onClick={onClose}
               >
@@ -131,10 +136,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </ul>
         </nav>
 
-        <div className="p-4 mt-4 border-t border-gray-200 dark:border-gray-800">
+        <div className="p-4 mt-4 border-t border-border">
           <Link
-            href="/#booking"
-            className="flex items-center justify-center w-full py-3 px-4 bg-[#7A7FEE] text-white rounded-lg text-base font-medium hover:bg-opacity-90 transition-colors"
+            href="/#contact"
+            className="flex items-center justify-center w-full py-4 px-4 bg-primary text-primary-foreground rounded-xl text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95"
             onClick={onClose}
           >
             Fale Conosco

@@ -58,33 +58,41 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-200 ${isScrolled ? "bg-white/90 dark:bg-[#111111]/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled ? "bg-background/80 dark:bg-background/90 backdrop-blur-md border-b border-border/50 shadow-sm" : "bg-transparent"
           }`}
       >
         <div className="container py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center" onClick={handleLogoClick}>
+            <Link href="/" className="flex items-center gap-3 group" onClick={handleLogoClick}>
+              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/estudiodevlogo-favicon.png"
+                  alt="Estúdio Dev Logo"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               {/* Use a div with the same dimensions during SSR to prevent layout shift */}
               {mounted ? (
-                <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-                  WebVel
+                <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-purple-600">
+                  Estúdio Dev
                 </span>
               ) : (
-                <span className="text-2xl font-bold text-primary">WebVel</span>
+                <span className="text-2xl font-black tracking-tight text-primary">Estúdio Dev</span>
               )}
             </Link>
 
             <div className="flex items-center space-x-4">
               {/* Desktop Navigation */}
               <nav className="hidden md:block">
-                <ul className="flex space-x-6">
-
+                <ul className="flex space-x-8">
                   <li>
                     <Link
                       href="/portfolio"
-                      className={`transition-colors ${pathname === "/portfolio"
-                        ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
-                        : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
+                      className={`text-sm font-medium transition-colors ${pathname === "/portfolio"
+                        ? "text-primary"
+                        : "text-foreground/70 hover:text-primary"
                         }`}
                     >
                       Portfólio
@@ -92,8 +100,8 @@ export default function Header() {
                   </li>
                   <li>
                     <Link
-                      href="/#booking"
-                      className="text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE] transition-colors"
+                      href="/#contact"
+                      className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
                     >
                       Fale Conosco
                     </Link>
@@ -101,9 +109,9 @@ export default function Header() {
                   <li>
                     <Link
                       href="/start"
-                      className={`transition-colors ${pathname === "/start"
-                        ? "text-[#7A7FEE] dark:text-[#7A7FEE]"
-                        : "text-black dark:text-white hover:text-[#7A7FEE] dark:hover:text-[#7A7FEE]"
+                      className={`text-sm font-medium transition-colors ${pathname === "/start"
+                        ? "text-primary"
+                        : "text-foreground/70 hover:text-primary"
                         }`}
                     >
                       Iniciar Projeto
@@ -112,15 +120,17 @@ export default function Header() {
                 </ul>
               </nav>
 
+              <div className="h-6 w-px bg-border/50 hidden md:block"></div>
+
               <ThemeToggle />
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-2 rounded-md bg-transparent hover:bg-gray-200/50 dark:hover:bg-gray-800/20 md:hidden"
+                className="p-2 rounded-xl bg-muted/50 hover:bg-muted text-foreground md:hidden transition-colors"
                 aria-label="Toggle menu"
               >
-                <Menu className="h-6 w-6 text-black dark:text-white" />
+                <Menu className="h-6 w-6" />
               </button>
             </div>
           </div>

@@ -1,51 +1,63 @@
-import Image from "next/image"
+"use client"
+
 import ContactFormButton from "./contact-form-button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Star } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function CallToAction() {
   return (
-    <section id="contact" className="card my-20 relative overflow-hidden shadow-md border-primary/20">
-      <div className="p-8 md:p-10 lg:p-12 flex flex-col md:flex-row items-center">
-        {/* Text content */}
-        <div className="w-full md:w-3/5 z-10">
-          <h2 className="text-foreground mb-6 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-            Pronto para <span className="text-primary">Inovar?</span>
-          </h2>
-
-          <p className="my-4 text-base md:text-lg max-w-md text-muted-foreground leading-relaxed">
-            Não deixe sua ideia apenas no papel. Vamos transformá-la em realidade.
-          </p>
-          <p className="mb-6 text-base md:text-lg max-w-md text-muted-foreground leading-relaxed">
-            Agende uma consultoria gratuita e descubra como podemos elevar o nível tecnológico do seu negócio.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <ContactFormButton />
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-primary/50 text-foreground hover:bg-secondary/50 transition-all font-medium"
-            >
-              Nossas soluções
-              <ArrowRight className="w-4 h-4" />
-            </a>
+    <section id="contact" className="py-24 relative overflow-hidden">
+      <div className="container relative z-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-primary via-primary/95 to-indigo-600 dark:to-indigo-900 px-8 py-16 md:py-24 text-center border border-white/10 shadow-2xl transition-all duration-500"
+        >
+          {/* Decorative background effects */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"
+            style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}>
           </div>
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
 
-          <p className="mt-6 text-sm text-muted-foreground">
-            ✓ Consultoria Gratuita &nbsp;&nbsp;|&nbsp;&nbsp; ✓ Entrega Ágil &nbsp;&nbsp;|&nbsp;&nbsp; ✓ Qualidade
-            Garantida
-          </p>
-        </div>
+          <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+            <div className="flex items-center gap-1 mb-6">
+              {[1, 2, 3, 4, 5].map((s) => (
+                <Star key={s} className="w-4 h-4 text-white fill-white animate-pulse" style={{ animationDelay: `${s * 0.2}s` }} />
+              ))}
+            </div>
 
-        {/* Image */}
-        <div className="hidden md:block md:w-2/5 md:absolute md:right-0 md:top-0 md:bottom-0 md:flex md:items-center opacity-20">
-          <Image
-            src="/purple-circle-wave-static.png"
-            alt="Contact"
-            width={500}
-            height={500}
-            className="w-full h-auto md:h-full md:w-auto md:object-cover md:object-left"
-          />
-        </div>
+            <h2 className="text-white mb-8 text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+              Sua visão merece um <br className="hidden md:block" />
+              <span className="text-white/80">desenvolvimento de elite.</span>
+            </h2>
+
+            <p className="text-white/90 text-lg md:text-xl font-light mb-12 max-w-xl leading-relaxed">
+              Não aceite o comum. Solicite seu orçamento gratuito e descubra como podemos elevar o nível tecnológico do seu negócio.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 w-full max-w-xl justify-center">
+              <div className="w-full sm:flex-1 transform hover:scale-[1.02] transition-transform duration-300 shadow-2xl shadow-indigo-500/30">
+                <ContactFormButton className="w-full px-8 py-4 rounded-2xl bg-white text-primary flex items-center justify-center gap-2 font-black uppercase text-xs tracking-[0.2em] shadow-xl" />
+              </div>
+              <a
+                href="#services"
+                className="w-full sm:flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white backdrop-blur-md transition-all font-black uppercase text-xs tracking-[0.2em] group"
+              >
+                Nossas soluções
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-sm font-semibold text-white/70">
+              <span className="flex items-center gap-2">✓ Orçamento Sem Compromisso</span>
+              <span className="flex items-center gap-2">✓ Entrega Ágil</span>
+              <span className="flex items-center gap-2">✓ Qualidade Garantida</span>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
