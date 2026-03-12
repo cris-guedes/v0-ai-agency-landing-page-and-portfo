@@ -63,7 +63,16 @@ export default function Header() {
       >
         <div className="container py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center" onClick={handleLogoClick}>
+            <Link href="/" className="flex items-center gap-3 group" onClick={handleLogoClick}>
+              <div className="relative w-8 h-8 group-hover:scale-110 transition-transform duration-300">
+                <Image
+                  src="/estudiodevlogo-favicon.png"
+                  alt="Estúdio Dev Logo"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               {/* Use a div with the same dimensions during SSR to prevent layout shift */}
               {mounted ? (
                 <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-purple-600">

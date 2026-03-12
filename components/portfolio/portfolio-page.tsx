@@ -44,7 +44,7 @@ export default function PortfolioPage({ initialData }: PortfolioPageProps) {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl lg:text-7xl font-black text-foreground mb-6 leading-tight tracking-tight"
             >
-              Nosso <span className="text-primary italic">Portfólio</span>
+              Nosso <span className="text-primary">Portfólio</span>
             </motion.h1>
             <p className="text-gray-700 dark:text-gray-300 max-w-2xl">
               Explore nossos projetos e cases recentes. De automação com IA a marketplaces personalizados, nosso trabalho ajuda empresas a crescerem com inovação.

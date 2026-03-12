@@ -35,7 +35,7 @@ const steps = [
         id: 4,
         number: "04",
         title: "Lançamento",
-        description: "Testes rigorosos, deploy e acompanhamento pós-lançamento para garantir o sucesso.",
+        description: "Finalização e publicação da plataforma, disponibilizando sua nova estrutura digital para o acesso de clientes.",
         icon: Rocket,
         color: "text-emerald-400",
         bg: "bg-emerald-400/10",
@@ -56,7 +56,7 @@ export default function Process() {
                         <span className="text-[10px] font-bold tracking-widest text-primary uppercase">Metodologia</span>
                     </motion.div>
                     <h2 className="text-foreground mb-6 text-4xl md:text-5xl font-bold leading-tight">
-                        Como <span className="text-primary italic">Trabalhamos</span>
+                        Como <span className="text-primary">Trabalhamos</span>
                     </h2>
                     <p className="text-muted-foreground text-lg leading-relaxed font-light">
                         Um processo ágil e transparente para transformar sua ideia em um produto digital de sucesso.

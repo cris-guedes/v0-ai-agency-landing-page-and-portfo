@@ -41,7 +41,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-light">
-              Transformamos ideias em experiências digitais memoráveis. Especialistas em Cascavel - PR e região para sites, sistemas e design estratégico que impulsionam resultados.
+              Transformamos ideias em experiências digitais memoráveis. Especialistas em Cascavel - PR e região para sites e design estratégico.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-5 w-full max-w-xl">
@@ -61,7 +61,7 @@ export default function Hero() {
                   height={20}
                   className="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity"
                 />
-                Consultoria Grátis
+                Orçamento Grátis
               </a>
             </div>
 
@@ -161,8 +161,8 @@ export default function Hero() {
                 <MousePointer2 className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="text-foreground text-xs font-semibold">User Experience</span>
-                <span className="text-muted-foreground text-[10px]">99% Satisfaction</span>
+                <span className="text-foreground text-xs font-semibold">Interface Intuitiva</span>
+                <span className="text-muted-foreground text-[10px]">Design Moderno</span>
               </div>
             </motion.div>
           </motion.div>

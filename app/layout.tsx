@@ -16,7 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Estúdio Dev - Design & Software | Cascavel - PR",
   description:
-    "Transformamos suas ideias em realidade digital. Especialistas em desenvolvimento de sites, sistemas web, aplicativos e design exclusivo em Cascavel - PR e região.",
+    "Transformamos suas ideias em realidade digital. Especialistas em desenvolvimento de sites, aplicativos e design exclusivo em Cascavel - PR e região.",
   keywords: [
     "desenvolvimento de sites",
     "criação de sites cascavel",

@@ -6,54 +6,30 @@ import { motion } from "framer-motion"
 const services = [
   {
     id: 1,
-    title: "UI/UX Design",
+    title: "Design de Interface",
     description:
-      "Interfaces modernas, intuitivas e focadas na experiência do usuário. Transformamos sua marca em design visual impactante.",
+      "Desenvolvemos identidades visuais modernas e interfaces intuitivas com o objetivo de elevar a percepção da sua marca e otimizar a experiência do usuário.",
     icon: Palette,
     gradient: "from-blue-500/20 to-indigo-500/20",
     iconColor: "text-blue-400",
   },
   {
     id: 2,
-    title: "Desenvolvimento Web",
-    description: "Sites institucionais, Landing Pages e E-commerce de alta performance, otimizados para SEO e conversão.",
-    icon: Globe,
+    title: "Desenvolvimento de Sites",
+    description:
+      "Construímos sites com foco em performance e boas práticas de SEO. Trabalhamos para que sua presença online seja eficiente e tecnicamente sólida.",
+    icon: Code,
     gradient: "from-purple-500/20 to-pink-500/20",
     iconColor: "text-purple-400",
   },
   {
     id: 3,
-    title: "Apps Mobile",
+    title: "Hospedagem",
     description:
-      "Aplicativos nativos e híbridos para iOS e Android. Leve seu negócio para a palma da mão dos seus clientes.",
-    icon: Smartphone,
+      "Oferecemos infraestrutura de alta disponibilidade com foco em estabilidade e proteção de dados. Gestão técnica para que você possa focar no seu negócio.",
+    icon: Server,
     gradient: "from-cyan-500/20 to-blue-500/20",
     iconColor: "text-cyan-400",
-  },
-  {
-    id: 4,
-    title: "Sistemas Sob Medida",
-    description:
-      "Soluções de software personalizadas para a gestão do seu negócio. CRMs, ERPs e Dashboards administrativos.",
-    icon: Server,
-    gradient: "from-emerald-500/20 to-teal-500/20",
-    iconColor: "text-emerald-400",
-  },
-  {
-    id: 5,
-    title: "Consultoria Tech",
-    description: "Análise de infraestrutura, arquitetura de software e otimização de processos tecnológicos.",
-    icon: LineChart,
-    gradient: "from-orange-500/20 to-amber-500/20",
-    iconColor: "text-orange-400",
-  },
-  {
-    id: 6,
-    title: "Manutenção e Evolução",
-    description: "Suporte contínuo e implementação de novas funcionalidades para garantir que seu software nunca pare.",
-    icon: Code,
-    gradient: "from-rose-500/20 to-red-500/20",
-    iconColor: "text-rose-400",
   },
 ]
 
@@ -71,10 +47,10 @@ export default function Services() {
             <span className="text-[10px] font-bold tracking-widest text-primary uppercase">Experiência Digital</span>
           </motion.div>
           <h2 className="text-foreground mb-6 text-4xl md:text-5xl font-bold leading-tight">
-            Nossas <span className="text-primary italic">Soluções</span>
+            Nossas <span className="text-primary">Soluções</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed font-light">
-            Combinamos tecnologia de ponta e design inovador para entregar resultados que impulsionam o crescimento do seu negócio.
+            Combinamos tecnologia de ponta e design inovador para entregar resultados para que você impulsione o crescimento do seu negócio.
           </p>
         </div>
 

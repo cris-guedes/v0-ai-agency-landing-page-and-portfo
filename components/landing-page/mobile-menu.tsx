@@ -68,7 +68,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-background border-l border-border shadow-2xl overflow-y-auto transition-colors duration-500"
       >
         <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-border bg-background/80 backdrop-blur-md">
-          <Link href="/" className="flex items-center" onClick={onClose}>
+          <Link href="/" className="flex items-center gap-2" onClick={onClose}>
+            <Image
+              src="/estudiodevlogo-favicon.png"
+              alt="Estúdio Dev Logo"
+              width={24}
+              height={24}
+              className="w-6 h-6 object-contain"
+            />
             {mounted ? (
               <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
                 Estúdio Dev

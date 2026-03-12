@@ -21,7 +21,7 @@ export default function LandingPage({ showHeader = true, showFooter = true }: La
       {showHeader && <Header />}
       <Hero />
       <Projects />
-      <Services />
+      <Services />  
       <Process />
       <CallToAction />
       <BookingSection />

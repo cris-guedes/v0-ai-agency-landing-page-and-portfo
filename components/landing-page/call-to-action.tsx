@@ -35,7 +35,7 @@ export default function CallToAction() {
             </h2>
 
             <p className="text-white/90 text-lg md:text-xl font-light mb-12 max-w-xl leading-relaxed">
-              Não aceite o comum. Agende uma consultoria gratuita e descubra como podemos elevar o nível tecnológico do seu negócio.
+              Não aceite o comum. Solicite seu orçamento gratuito e descubra como podemos elevar o nível tecnológico do seu negócio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 w-full max-w-xl justify-center">
@@ -52,7 +52,7 @@ export default function CallToAction() {
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 text-sm font-semibold text-white/70">
-              <span className="flex items-center gap-2">✓ Consultoria Gratuita</span>
+              <span className="flex items-center gap-2">✓ Orçamento Sem Compromisso</span>
               <span className="flex items-center gap-2">✓ Entrega Ágil</span>
               <span className="flex items-center gap-2">✓ Qualidade Garantida</span>
             </div>

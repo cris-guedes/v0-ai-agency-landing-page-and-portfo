@@ -10,12 +10,9 @@ interface PortfolioFiltersProps {
 export default function PortfolioFilters({ activeFilter, setActiveFilter }: PortfolioFiltersProps) {
   const filters = [
     { id: "all", label: "Todos os Projetos" },
-    { id: "web", label: "Aplicações Web" },
-    { id: "web3", label: "Web3 & Blockchain" },
-    { id: "ai", label: "Soluções IA" },
-    { id: "design", label: "UX/UI Design" },
-    { id: "bubble", label: "Projetos Bubble" },
-    { id: "mobile", label: "Apps Mobile" },
+    { id: "web", label: "Sites" },
+    { id: "design", label: "Design" },
+    { id: "mobile", label: "Aplicativos" },
   ]
 
   return (
